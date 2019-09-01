@@ -1,0 +1,119 @@
+<?php 
+
+class clsProducto{
+private $id_codigo;
+/*
+private $cedula;
+private $nombre;
+private $apellido;
+private $genero;
+private $fecha_nac;
+private $fecha_ing;
+private $nacionalidad;
+private $telefono;
+private $direccion;
+private $id_cliente;
+	
+	public function __construct($ced, $nom, $ape, $gen, $fecha_nac, $fecha_ing, $nacio, $tlf, $direc){
+$this->cedula=$ced;
+$this->nombre=$nom;
+$this->apellido=$ape;
+$this->genero=$gen;
+$this->fecha_nac=$fecha_nac;
+$this->fecha_ing=$fecha_ing;
+$this->nacionalidad=$nacio;
+$this->telefono=$tlf;
+$this->direccion=$direc;
+	}
+	
+	
+	
+	/*
+	public function getCedula(){
+		return $this->cedula;
+	}
+	
+	public function getnombre(){
+		return $this->nombre;
+	}
+	
+	public function getapellido(){
+		return $this->apellido;
+	}
+	
+	public function getgenero(){
+		return $this->genero;
+	}
+	
+	public function getfecha_nac(){
+		return $this->fecha_nac;
+	}
+
+	public function getfecha_ing(){
+		return $this->fecha_ing;
+	}
+	
+	public function gettelefono(){
+		return $this->telefono;
+	}
+	
+	public function getnacionalidad(){
+		return $this->nacionalidad;
+	}
+	
+	public function getdireccion(){
+		return $this->direccion;
+	}
+*/
+public function getId_codigo(){
+		return $this->id_codigo;
+	}
+	
+/*
+
+public function buscarPro($dato){
+	$encontro=false;
+	$sql=mysql_query("SELECT t1.cedula,t1.nombre,t1.apellido,t1.nacionalidad,t2.telefono,t3.direccion
+from clientes t1
+INNER JOIN tlf_cliente t2 on t2.id_cliente=t1.id_cliente
+INNER JOIN direccion_cliente t3 on t3.id_cliente=t1.id_cliente where t1.status=1 AND  t2.status=1 AND  t3.status=1 And t1.cedula='$dato' ");
+	$num=mysql_num_rows($sql);
+	if ($num>0) {
+    $row=mysql_fetch_array($sql);
+$this->cedula=$row['cedula'];
+$this->nombre=$row['nombre'];
+$this->apellido=$row['apellido'];
+$this->nacionalidad=$row['nacionalidad'];
+$this->telefono=$row['telefono'];
+$this->direccion=$row['direccion'];
+ $encontro=true;
+	}
+return $encontro;
+}
+*/
+
+
+public function buscarPro_venta($dato){
+	$encontro=false;
+	$sql=mysql_query("SELECT id_producto
+from producto 
+ where status=1 And codigo_pro='$dato' ");
+	$num=mysql_num_rows($sql);
+	if ($num>0) {
+    $row=mysql_fetch_array($sql);
+
+$this->id_codigo=$row[0];
+ $encontro=true;
+	}
+return $encontro;
+}
+
+
+
+	
+
+}
+
+
+
+ ?>

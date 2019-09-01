@@ -1,0 +1,387 @@
+body{
+	font-family: "Ubuntu";
+}
+#alerta{
+width: 250px;
+text-align: center;
+margin-top: 5px;
+margin-bottom: 0px;
+height: 40px
+	}
+
+	#alerta2{
+width: 280px;
+text-align: center;
+margin-top: 5px;
+margin-bottom: 0px;
+height: 40px
+	}
+	#aling_right{
+		text-align: right;
+	}
+	#aj{
+		width: 110px;
+	}
+
+#asterisco{
+	color: #602935;
+}
+#apartado_cedula{
+	width: 150px;
+}
+	#log{
+	color: #3DD6FF;
+line-height: 45px;
+font-family: "Ubuntu";
+font-weight: bold;
+}
+#bodyM{
+	height: 500px;
+}
+#bold{
+	font-weight: bold;
+}
+.bold{
+	font-weight: bold;
+}
+#buscar{
+	height: 25px;
+	padding: 2px;
+	margin-bottom: 10px;
+}
+#buscarbtn{
+	width: 60px;
+	height: 27px;
+	margin-left: -10px;
+	margin-top: 3px;
+}
+#btn_buscar{
+	margin-left: -6px;width: 60px;
+}
+#buscarbtnpro{
+	width: 60px;
+	height: 27px;
+	margin-left: -8px;
+
+}
+#Hoverbtn{
+	border:0px;
+	width: 100%;
+	height: 23px;
+	text-align: left;
+	background: #fff;
+	
+}
+#Hoverbtn:hover{
+	border:0px;
+	background: #0170B4;
+	
+}
+
+#btnAzulCielo{
+	background: #08B1FF;
+	text-align: left;
+	font-weight: bold;
+	height: 33px;
+}
+.tamano{
+	width: 60px;
+}
+#campo{
+	width:400px; 
+	margin-left: 30px;
+	height: 30px;
+}
+#cantidad_inv{
+	width: 150px;
+	margin-left: 10px;
+}
+#cancelarBus
+{background: #146C80;
+	color: #FFF;}
+	#categoria{
+		width: 215px;
+	height: 30px;
+	
+	}
+#carrito{
+	border-radius:50px;
+	border: 2px solid #d0d0d0;
+	
+}
+
+#cedula_emp{
+	width: 120px;
+}
+#colorbtn{
+background: #FF6E06;
+}
+#columnas{
+	background: #146C80;
+	color: #FFF;
+}
+#fecha_nac_emp{
+	width: 170px;
+}
+#genero,#nacion{
+	width: 245px;
+	height: 30px;
+	margin-left: 30px;
+}
+.headerT{
+	background: #b0b0b0;
+	color: #FFF;
+	text-shadow: -1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.input-personalizado{
+	height: 30px;
+	padding: 7px
+}
+#Listar{
+	width: 90%;
+	height: 90%;
+}
+#logotipo{
+	width: 158px;
+height: 68px;
+margin-top: -29px;
+}
+#mejor{
+width: 25%;
+}
+#Mcedula,#tipoN{
+	width: 110px;
+	height: 30px;
+	margin-left: 30px;
+}
+#tipoN{
+	margin-left: 30px;
+}
+#Mapellido,#Mnombre{
+	width: 400px;
+	height: 30px;
+	margin-left: 30px;
+}
+#Mdireccion{
+	width: 275px;
+	resize:none;
+	margin-left: 30px;
+}
+#Mcodigo_tlf{
+	width: 55px;
+	height: 30px;
+	margin-left: 1px;
+	text-align: center;
+}
+#Mtelefono{
+	width: 150px;
+	height: 30px;
+	margin-left: 2px;
+
+}
+#nacionalidad_emp{
+	width: 150px;
+}
+#Stele{
+height: 30px;
+margin-left: 30px;
+width: 120px;
+}
+
+#fact_aling{
+	text-align: center;
+}
+#fecha1{
+
+	height: 30px;
+	margin-left: 30px;
+}
+#filtrar{
+	padding: 2px;
+	width: 300px;
+	height: 27px;
+}
+#genero_emp{
+	text-align: center;
+	
+}
+#nacionV{
+
+	width: 40px;
+	height: 27px;
+}
+#newuser{
+	margin-right: 45px;
+}
+#operaciones{
+	width: 50px;
+}
+#reloj{
+	border: 0px;
+height: 22px;
+	background: transparent;
+}
+
+select{
+
+	padding: 5px;
+	height: 27px;
+	
+	text-align: center;
+	border: 1px solid #d0d0d0;
+	border-radius: 5px;
+	background: #fff;
+	font-weight: normal;;
+
+}
+select:focus{
+	border: 0.5px solid #008DFF;
+
+	box-shadow: 0px 0px 1px 2px rgba(0,175,259,0.2);
+}
+#scroll{
+		margin-top: -20px;
+		overflow: auto;
+		width: 100%;
+		height: 150px;
+	}
+	#direccion_emp{
+		resize:none;
+	}
+.tablaHeader{
+	background: #e9e9e9;
+}
+#tablaHeader2{
+	background: #e9e9e9;
+	width: 60px;
+	text-align: left;
+}
+
+#tablaVenta{
+height: 190px;
+}
+#tabla_modal{
+	height: 300px;
+}
+#tamano_modal{
+	width: 90%;
+}
+#table_operaciones{
+	width: 10px;
+	text-align: center;
+
+}
+#tipo,#tipo:hover{
+	color: #FFF;
+	font-size: 17px;
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+		background: #69B183;
+}
+#titulo_pro{
+	color: #0797C3;
+}
+#titulo_r{
+	font-size: 30px;
+	color: #3DD6FF;
+	text-align: center;
+}
+#titulo_header{
+	font-size: 20px;
+	color: #146C80;
+	text-align: center;
+}
+#titulo_t{
+	font-size: 30px;
+	color: #146C80;
+	text-align: center;
+}
+#titulo_fact{
+	font-size: 25px;
+	color: #1d1d1d;
+	text-align: center;
+}
+#Titulo{
+color:#fff;
+font-size: 1.6em;
+
+text-shadow: 0px 1px 3px  rgba(1,01,1,1);
+margin-top: -10px;
+
+}
+.Total{
+background: #F9C378;
+}
+#thCodigo{ width: 250px;}
+#thNombre{width: 450px; }
+#thCant{ width: 75px;}
+#thPrecio{
+	width: 150px;
+}
+
+
+#txtBuscar{
+	width: 300px;
+	height: 27px;
+}
+
+#bs-prod{
+
+	height: 30px;
+	padding: 4px;
+	max-width: 90%;
+	margin: auto;
+
+}
+.texto_center{
+	text-align: center;
+}
+#TxtCedula{
+	width: 120px;
+	height: 27px;
+}
+#Txtcliente{
+		width: 220px;
+	    height: 27px;
+}
+#Txtlf{
+		width: 140px;
+	    height: 27px;
+}
+
+#TxtCompra{
+		width: 110px;
+	    height: 27px;
+}
+#TxtCodPro{
+	width: 130px;
+	    height: 27px;
+}
+
+#TxtArticulo{
+	width: 250px;
+	    height: 27px;
+}
+#TxtCategoria{
+	width: 250px;
+	    height: 27px;
+}
+#TxtPrecio{
+	width: 100px;
+	    height: 27px;
+}
+#TxtCant{
+	width: 50px;
+	padding: 2px;
+	    height: 27px;
+}
+#TxtStock{
+	width: 50px;
+	    height: 27px;
+}
+#txtDireccion{
+	width: 560px;
+	    height: 27px;
+}

@@ -1,0 +1,83 @@
+<?php
+ require_once('ModCon.php');
+$modelo=new ModCon();
+$conexion=$modelo->conectar();
+$aux=$_POST['dato'];
+if ($aux=="agotados") {
+	$aux="agotado";
+}
+else if ($aux=="activos") {
+		$aux="activo";
+}
+session_start();
+$nivel=$_SESSION["nivel"];
+
+
+$sql=$conexion->query("SELECT t1.id_empleado,t1.cedula,t1.nombres,t1.apellidos,t1.cargo,t1.status
+from  empleados t1
+ 
+where t1.nombres like '%$aux%' OR
+     t1.status like '%$aux%'  OR
+ t1.cedula like '%$aux%' OR
+  t1.cargo like '%$aux%' OR
+
+
+   t1.apellidos like '%$aux%' ORDER BY t1.nombres asc ");
+
+$num=$sql->num_rows;
+if ($num>0) {
+	?>
+	<!DOCTYPE html>
+	<html>
+	<head>
+		
+		<link rel="stylesheet" href="../css/MyStyle.css">
+		<link rel="stylesheet" href="../Bootstrap/bootstrap.css">
+	</head>
+	<body>
+		
+	
+	<center>
+  <table  class="table table-striped table-condensed table-hover">
+    <tr>
+     <th class="headerT">Id</th>
+    <th class="headerT">cedula</th>
+    <th class="headerT">Nombre y Apellido</th>
+   
+    <th class="headerT">Cargo</th>
+    <th class="headerT">status</th>
+     <th class="headerT" colspan="2"></th>
+   
+    </tr>
+
+
+
+<?php 
+	while ($row=$sql->fetch_array()) {
+		?>
+	 <tr>
+     <td><?php echo $row[0] ?></td>
+    <td><?php echo $row[1] ?></td>
+    <td><?php echo $row[2]."&nbsp;".$row[3] ?></td>
+
+    <td><?php echo $row[4] ?></td>
+    
+    <td><?php $status=$row[5];
+if ($status=="activo") {
+ echo '  <button type="button" class="btn btn-success btn-xs"> <span class="glyphicon glyphicon-ok"></span>&nbsp;Activo</button>' ;
+}else{ echo  '<button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-remove"></span>&nbsp;Inactivo</button>';
+
+} ?></td>
+ <td id="table_operaciones"><?php echo '  <a href="editar_producto.php?id=" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-eye-open"></span>&nbsp;Ver</a>';?></td>
+  <td id="table_operaciones"><?php echo '  <a href="holamundo" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-remove-sign"></span>&nbsp;Eliminar</a>'; ?></td>
+</tr>
+<?php 
+	
+}
+?>
+</table>
+	</center>
+	</body>
+	</html>
+<?php
+}

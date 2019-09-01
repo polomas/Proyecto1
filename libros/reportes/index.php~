@@ -1,0 +1,109 @@
+<?php 
+require 'FPDF/fpdf.php';
+
+ class PDF extends FPDF
+{
+
+
+// Pie de página
+function Footer()
+{
+    // Posición: a 1,5 cm del final
+    $this->SetY(-15);
+    // Arial italic 8
+    $this->SetFont('Arial','I',8);
+    // Número de página
+    $this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
+}
+}
+
+// Creación del objeto de la clase heredada
+$pdf = new PDF("P","mm","Letter");
+$pdf->AliasNbPages();
+$pdf->AddPage();
+$pdf->SetFont('Arial','',22);
+$a=$pdf->Image('../img/logo.png',10,5,-200);
+ $pdf->Cell(30);
+$pdf->SetFont('Arial','B',15);
+$pdf->Cell(80,10,"R.I.F:5842621452",0,0,"C");
+$pdf->Cell(80,10,"Fecha:",1,1,"L");
+$pdf->SetFont('Arial','i',12);
+$pdf->Cell(30,7,"",0,0,"C");
+ $pdf->Cell(80,7,"Av. Raul Leonis",0,0,"C");
+
+ $pdf->Cell(20,8,"Factura:",1,0,"C");
+ $pdf->SetTextColor(255,0,0);
+ $pdf->SetFont('Helvetica','b',20);
+  $pdf->Cell(60,8,"N 000000001",1,1,"C");
+$pdf->SetFont('Arial','i',12);
+$pdf->SetTextColor(0,0,0);
+
+$pdf->Cell(30,7,"",0,0,"C");
+ $pdf->Cell(80,7,"El amparo",0,1,"C");
+ $pdf->Cell(30,7,"",0,0,"C");
+ $pdf->Cell(80,7,"Edo-Apure",0,1,"C");
+
+  $pdf->Cell(190,7,"	DATOS DEL CLIENTE",1,1,"C");
+
+$pdf->SetFont('Arial','B',13);
+  $pdf->Cell(31,6,"Rif/CI:",1,0,"C");
+  $pdf->SetFont('Helvetica','',12);
+ $pdf->Cell(30,6,"22289370",0,0,"L");
+
+$pdf->SetFont('Arial','B',13);
+  $pdf->Cell(31,6,"Cliente:",1,0,"C");
+  $pdf->SetFont('Helvetica','',12);
+ $pdf->Cell(150,6,"Anthony jesus Araujo Peroza",0,1,"L");
+
+ $pdf->SetFont('Arial','B',13);
+   $pdf->Cell(31,8,"Domicilio:",1,0,"C");
+   $pdf->SetFont('Helvetica','',12);
+ $pdf->Cell(165,6,"cale el embarcadero frente a la cerveceria el amparo",0,1,"L");
+ $pdf->SetFont('Arial','B',13);
+
+$pdf->Cell(0,2,"",0,1,"C");
+
+  $pdf->Cell(20,8,"CANT",1,0,"C");
+    $pdf->Cell(100,8,"DESCRIPCION",1,0,"C");
+      $pdf->Cell(35,8,"PRECIO",1,0,"C");
+        $pdf->Cell(35,8,"IMPORTE",1,1,"C");
+         $pdf->SetFont('Helvetica','',13);
+for ($i=0; $i < 3; $i++) { 
+
+	$pdf->Cell(20,8,"1",1,0,"C");
+    $pdf->Cell(100,8,"pepa",1,0,"C");
+      $pdf->Cell(35,8,"1500",1,0,"C");
+        $pdf->Cell(35,8,"500",1,1,"C");
+}
+
+for ($i=0; $i < 5; $i++) { 
+
+	$pdf->Cell(20,8,"",1,0,"C");
+    $pdf->Cell(100,8,"",1,0,"C");
+      $pdf->Cell(35,8,"",1,0,"C");
+        $pdf->Cell(35,8,"",1,1,"C");
+}
+$pdf->Cell(120,24,"Esta factura Sin el sello No es valida",1,0,"C");
+$pdf->SetFont('Helvetica','B',13);
+    $pdf->Cell(35,8,"SubTotal Bs:",1,0,"C");
+$pdf->SetFont('Helvetica','',13);
+      $pdf->Cell(35,8,"1500",1,1,"C");
+
+      $pdf->Cell(120,8,"",0,0,"C");
+     $pdf->SetFont('Helvetica','B',13);
+    $pdf->Cell(35,8,"Iva 12% Bs:",1,0,"C");
+$pdf->SetFont('Helvetica','',13);
+
+      $pdf->Cell(35,8," 1500",1,1,"C");
+
+      $pdf->Cell(120,8,"",0,0,"C");
+    $pdf->SetFont('Helvetica','B',13);
+    $pdf->Cell(35,8,"Total Bs:",1,0,"C");
+$pdf->SetFont('Helvetica','',13);
+
+      $pdf->Cell(35,8,"1500",1,1,"C");
+
+
+$pdf->Output('Numero.pdf','I');
+
+ ?>
